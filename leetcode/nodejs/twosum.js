@@ -9,3 +9,14 @@ var twoSum = function(nums, target) {
         map.set(subs, i);
     }
 };
+
+var twoSum = function(nums, target) {
+    let hash = {};
+
+    for(let i = 0; i < nums.length; i++) {
+        if(hash.hasOwnProperty(nums[i])) {
+          return [hash[nums[i]], i]
+        }
+        hash[target - nums[i]] = i;
+    }
+};
