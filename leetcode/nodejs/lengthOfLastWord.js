@@ -16,3 +16,9 @@ var lengthOfLastWord = function(s) {
     
     return result[result.length - 1]?.length ?? 0;
 };
+
+var lengthOfLastWord = function(s) {
+    const word = s.split(' ').filter(el => el != "");
+    
+    return word[word.length - 1].length ?? 0;
+};
